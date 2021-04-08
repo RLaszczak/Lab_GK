@@ -6,21 +6,21 @@ xmlns:xlink="http://www.w3.org/1999/xlink"
 preserveAspectRatio="xMidYMid">
  
 <defs>
+
 <g id = "poly" stroke = "black" >
-<svg height="250" width="200"><polygon points="250,50 350,150 300,250 200,250 150,150"/>
- 
+  <svg height="320" width="500">
+  	<polygon points=" 92 45,142 80,124 142,62 142,45 80" >
 
-
- 
 fill="none" stroke="black" stroke-width="1" >
  
 <animateTransform attributeName="transform"
 type="rotate"
-from="360 95 95"
-to="0 95 95"
+from="360 90 100"
+to="0 90 100"
 dur="5s"
 repeatCount="indefinite" />
  
+</polygon>
 </svg>
 </g>
 </defs>
@@ -39,3 +39,4 @@ repeatCount="indefinite" />
 <use xlink:href = "#figura"   transform = "translate(300,350) scale(1.2,1.2)" fill="blue"/>
 <use xlink:href = "#figura"   transform = "translate(700,100)  scale(0.6,0.6)" fill="green"/>
 </svg>
+

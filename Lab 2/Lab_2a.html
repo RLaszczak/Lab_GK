@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+let canvas = document.querySelector("#myCanvas");
+let context = canvas.getContext("2d");
+
+function drawTriangle() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  context.fillStyle = "#FFFFFF";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  let height = 200 * Math.cos(Math.PI / 6);
+
+  context.beginPath();
+  context.moveTo(100, 200);
+  context.lineTo(300, 200);
+  context.lineTo(200, 200 + height);
+  context.closePath();
+	
+    
+  // the outline
+  context.lineWidth = 10;
+  context.strokeStyle = '#666666';
+  context.stroke();
+
+  // the fill color
+  context.fillStyle = "#FFCC00";
+  context.fill();
+  
+  
+  
+  
+    // górna część
+  
+  context.beginPath();
+  context.lineTo(100, 200)
+  context.lineTo(300, 200);
+  context.lineTo(275, 150);
+  context.lineTo(125, 150);
+  context.lineTo(100, 200);
+  context.lineTo(200, 200 + height);
+  context.lineTo(300, 200);
+  context.fillStyle = "#FF1493";
+  context.fill();
+  
+  //szczegóły
+ 
+context.beginPath();
+ context.moveTo(175, 250);
+ context.bezierCurveTo(175, 275, 225, 275, 225, 250);
+ context.stroke();
+ context.strokeStyle = "black";
+	context.stroke();
+    
+    
+   context.beginPath();
+ context.moveTo(175, 250);
+ context.bezierCurveTo(175, 265, 225, 265, 225, 250);
+ context.stroke();
+ context.strokeStyle = "black";
+	context.stroke();
+  
+  
+  // zęby
+  
+  context.beginPath();
+context.moveTo(195, 260);
+context.lineTo(205, 260);
+context.stroke();
+ context.strokeStyle = "white";
+	context.stroke();
+
+  
+  //oczy
+  
+  context.beginPath();
+context.arc(150, 175, 12, 0, 1.99*Math.PI);
+   context.fillStyle = "white";
+  context.fill();
+  
+   context.beginPath();
+context.arc(150, 175, 7, 0, 1.99*Math.PI);
+   context.fillStyle = "black";
+  context.fill();
+  
+  
+    context.beginPath();
+context.arc(250, 175, 12, 0, 1.99*Math.PI);
+   context.fillStyle = "white";
+  context.fill();
+  
+   context.beginPath();
+context.arc(250, 175, 7, 0, 1.99*Math.PI);
+   context.fillStyle = "black";
+  context.fill();
+  
+  
+  
+  //obramówka
+  context.beginPath();
+  context.lineTo(100, 200)
+  context.lineTo(300, 200);
+  context.lineTo(275, 150);
+  context.lineTo(125, 150);
+  context.lineTo(100, 200);
+  context.lineTo(200, 200 + height);
+  context.lineTo(300, 200);
+  context.strokeStyle = "black";
+	context.stroke();
+
+
+
+  
+     
+  
+  
+  
+  
+}
+drawTriangle();
+
+
+</script> 
+
+</body>
+</html>
