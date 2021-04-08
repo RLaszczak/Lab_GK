@@ -1,4 +1,4 @@
-package lab3a
+package gk;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
